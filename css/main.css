@@ -1,0 +1,14 @@
+*{ box-sizing: border-box;}
+body{ margin: 0;}
+
+.hover-details-back{
+    width: 100%; height: 100vh; float: left ; 
+}
+.hover-details-back .full-section{
+    width: 100%; height: 100vh; float: left; position: relative; overflow: hidden;
+}
+
+.portion{ width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.portion img{ width: 100%; height: 100%; object-fit: cover;  position: absolute; top: 0; left: 0; display: none;}
+.portion.active img{ display: block;}
+

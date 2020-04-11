@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="hover-details-back"></div>
+        <div class="full-section" onmousemove="myFunction(event)">
+            <div class="portion"><img src="images/images/1.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/2.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/3.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/4.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/5.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/6.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/7.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/8.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/9.jpg" alt=""></div> 
+            <div class="portion"><img src="images/images/10.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/11.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/12.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/13.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/14.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/15.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/16.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/17.jpg" alt=""></div>
+            <div class="portion"><img src="images/images/18.jpg" alt=""></div>  
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.full-section .portion:first').addClass('active');
+        })
+
+        function myFunction(e) {
+            setRandomClass();
+            function setRandomClass() {
+            var fullversion = $(".full-section");
+            var items = fullversion.find(".portion");
+            var number = items.length;
+            var random = Math.floor((Math.random() * number));
+            items.removeClass("active");
+            items.eq(random).addClass("active");
+            }
+        }
+        
+      
+          
+      
+      </script>
+</body>
+</html>
