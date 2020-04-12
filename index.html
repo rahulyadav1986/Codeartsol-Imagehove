@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="hover-details-back mobile" id="mobile">
-        <div class="full-section" onmousemove="imagehovefunmobile()">
+        <div class="full-section" onclick="imagehovefunmobile()">
             <div class="portion"><img src="images/mobile/1.jpg" alt=""></div>
             <div class="portion"><img src="images/mobile/2.jpg" alt=""></div>
             <div class="portion"><img src="images/mobile/3.jpg" alt=""></div>
@@ -56,15 +56,15 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $('#desktop .full-section .portion:first').addClass('active');
-            $('#mobile .full-section .portion:first').addClass('active');
-        })
+        
+        $('#desktop .full-section .portion:first').addClass('active');
+        $('#mobile .full-section .portion:first').addClass('active');
+       
 
         function imagehovefun() {
             setRandomClass2();
             function setRandomClass2() {
-            var fullversion = $(".full-section");
+            var fullversion = $("#desktop .full-section");
             var items = fullversion.find(".portion");
             var number = items.length;
             var random = Math.floor((Math.random() * number));
@@ -75,7 +75,7 @@
         function imagehovefunmobile() {
             setRandomClassmobile();
             function setRandomClassmobile() {
-            var fullversion2 = $(".full-section");
+            var fullversion2 = $("#mobile .full-section");
             var items2 = fullversion2.find(".portion");
             var number2 = items2.length;
             var random2= Math.floor((Math.random() * number2));
@@ -83,6 +83,7 @@
             items2.eq(random2).addClass("active");
             }
         }
+       
       </script>
 </body>
 </html>
